@@ -1,15 +1,15 @@
 def run():
-    raumList = {}
-    weitererRaum = True
-    gesamtWohnung = 0
-    anzahlRaum = 0
+    raum_list = {}
+    weiterer_raum = True
+    gesamt_wohnung = 0
+    anzahl_raum = 0
 
-    while weitererRaum:
+    while weiterer_raum:
         teilrechteck = True
-        gesamtRaum = 0
+        gesamt_raum = 0
 
         print("Geben sie den Namen des Raumes an: ")
-        nameRaum = input()
+        name_raum = input()
 
         while teilrechteck:
             print("Geben sie die Breite ihres Rechteckes/ Teilrechteckes an: ")
@@ -17,25 +17,27 @@ def run():
             print("Geben sie nun die Länge an: ")
             laenge = float(input())
 
-            gesamtRaum = gesamtRaum + (breite * laenge)
+            gesamt_raum = gesamt_raum + (breite * laenge)
 
             print("Noch ein weiteres Teilrechteck?(Y/N)")
             userinput = input().lower()
             if userinput == "n":
                 teilrechteck = False
 
-        raumList.update({nameRaum: gesamtRaum})
-        gesamtWohnung = gesamtWohnung + gesamtRaum
-        anzahlRaum = anzahlRaum + 1
+        raum_list.update({name_raum: gesamt_raum})
+        gesamt_wohnung = gesamt_wohnung + gesamt_raum
+        anzahl_raum = anzahl_raum + 1
 
         print("Einen weiteren Raum? (Y/N) ")
         userinput = input().lower()
         if userinput == "n":
-            weitererRaum = False
+            weiterer_raum = False
 
-    raumDurchschnitt = gesamtWohnung / anzahlRaum
+    raum_durchschnitt = gesamt_wohnung / anzahl_raum
 
-    for raum in raumList:
-        print(f"{raum}: {raumList[raum]}")
-    print(f"Gesamtgröße: {gesamtWohnung}m²")
-    print(f"Durschnittsraumgröße: {raumDurchschnitt}m²")
+    for raum in raum_list:
+        print(f"{raum}: {raum_list[raum]}")
+    print(f"Gesamtgröße: {gesamt_wohnung}m²")
+    print(f"Durschnittsraumgröße: {raum_durchschnitt}m²")
+
+

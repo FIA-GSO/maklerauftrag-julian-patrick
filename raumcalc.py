@@ -4,6 +4,7 @@ def run():
     gesamt_wohnung = 0
     anzahl_raum = 0
 
+    # Solange Raum vorhanden, berechne Größe
     while weiterer_raum:
         teilrechteck = True
         gesamt_raum = 0
@@ -15,6 +16,7 @@ def run():
         gesamt_wohnung = gesamt_wohnung + gesamt_raum
         anzahl_raum = anzahl_raum + 1
 
+        # Abfrage ob weiterer Raum vorhanden
         print("Einen weiteren Raum? (Y/N) ")
         userinput = input().lower()
         if userinput == "n":
@@ -23,7 +25,7 @@ def run():
     raum_durchschnitt = gesamt_wohnung / anzahl_raum
     print_list(gesamt_wohnung, raum_durchschnitt, raum_list)
 
-
+# Berechnet Teilrechtecke solange vorhanden
 def calc_teilrechteck(gesamt_raum, teilrechteck):
     while teilrechteck:
         print("Geben sie die Breite ihres Rechteckes/ Teilrechteckes an: ")
@@ -39,7 +41,7 @@ def calc_teilrechteck(gesamt_raum, teilrechteck):
             teilrechteck = False
     return gesamt_raum
 
-
+# Ausgabe der Ergebnisse in Listenform für Anschaulichkeit
 def print_list(gesamt_wohnung, raum_durchschnitt, raum_list):
     for raum in raum_list:
         print(f"{raum}: {raum_list[raum]}m²")

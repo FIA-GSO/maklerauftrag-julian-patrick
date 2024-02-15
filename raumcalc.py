@@ -25,6 +25,7 @@ def run():
     raum_durchschnitt = gesamt_wohnung / anzahl_raum
     print_list(gesamt_wohnung, raum_durchschnitt, raum_list)
 
+
 # Berechnet Teilrechtecke solange vorhanden
 def calc_teilrechteck(gesamt_raum, teilrechteck):
     while teilrechteck:
@@ -41,11 +42,11 @@ def calc_teilrechteck(gesamt_raum, teilrechteck):
             teilrechteck = False
     return gesamt_raum
 
+
 # Ausgabe der Ergebnisse in Listenform für Anschaulichkeit
 def print_list(gesamt_wohnung, raum_durchschnitt, raum_list):
     for raum in raum_list:
         print(f"{raum}: {raum_list[raum]}m²")
     print(f"Gesamtgröße: {gesamt_wohnung}m²")
     print(f"Durschnittsraumgröße: {raum_durchschnitt}m²")
-
 

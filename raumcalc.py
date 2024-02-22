@@ -54,6 +54,7 @@ def print_list(gesamt_wohnung, raum_durchschnitt, raum_list):
     print(f"Durschnittsraumgröße: {raum_durchschnitt}m²")
 
 
+# Überprüft Ja/Nein Abfragen
 def yes_no_input():
     pattern = re.compile(r"[yYnN]")
     not_matching = True
@@ -65,6 +66,7 @@ def yes_no_input():
             print("Falsche Eingabe, bitte erneut eingeben: (Y/N)")
 
 
+# Überprüft Input von Zahlen
 def number_input():
     integer = re.compile(r"\d+")
     floating = re.compile(r"\d+[.]\d+")
@@ -77,6 +79,7 @@ def number_input():
             print("Falsche Eingabe, bitte erneut eingeben: (Ganz- oder Dezimalzahl)")
 
 
+# Überprüft Strings wie Raumnamen
 def name_input():
     pattern = re.compile(r"^[a-zA-ZöäüÄÖÜ]+$")
     not_matching = True

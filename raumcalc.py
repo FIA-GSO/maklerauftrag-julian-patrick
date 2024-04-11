@@ -84,7 +84,7 @@ def name_input():
     pattern = re.compile(r"^[a-zA-ZöäüÄÖÜß0-9]+$")
     not_matching = True
     while not_matching:
-        name = input()
+        name = input().title()
         if pattern.match(name):
             return name
         else:

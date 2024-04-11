@@ -81,7 +81,7 @@ def number_input():
 
 # Überprüft Strings wie Raumnamen
 def name_input():
-    pattern = re.compile(r"^[a-zA-ZöäüÄÖÜß]+$")
+    pattern = re.compile(r"^[a-zA-ZöäüÄÖÜß0-9]+$")
     not_matching = True
     while not_matching:
         name = input()
